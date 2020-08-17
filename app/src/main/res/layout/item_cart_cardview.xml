@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/foodCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="3dp"
+    android:foreground="?attr/selectableItemBackground"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivCartItem"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="0dp"
+            android:clickable="true"
+            android:contentDescription="@string/food_items_image"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:scaleType="fitXY"
+            android:src="@drawable/lettuce"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/ivCartItem"
+            android:ellipsize="end"
+            android:paddingStart="0dp"
+            android:paddingEnd="5dp"
+            android:singleLine="true"
+            android:textColor="#111"
+            android:textSize="12sp"
+            tools:text="Fish" />
+
+        <TextView
+            android:id="@+id/tvStoreItem"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemName"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/ivCartItem"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#111"
+            android:textSize="12sp"
+            tools:text="Fish Store" />
+        <TextView
+            android:id="@+id/tvReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivCartItem"
+            android:layout_below="@id/tvStoreItem"
+            android:textColor="#111"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            />
+
+
+        <Button
+            android:id="@+id/btnSubstract"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="@string/substract"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_marginStart="70dp"
+            android:layout_toEndOf="@id/tvRemove"
+            android:layout_below="@id/tvReview"/>
+        <TextView
+            android:id="@+id/tvSelectedAmount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/btnSubstract"
+            android:text="@string/basic_food_amount"
+            android:layout_below="@id/tvReview"
+            android:padding="5dp"
+            android:textColor="@color/blue"
+            android:layout_marginStart="5dp"/>
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="@string/plus"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_toEndOf="@id/tvSelectedAmount"
+            android:layout_below="@id/tvReview"
+            />
+        <TextView
+            android:id="@+id/tvRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivCartItem"
+            android:layout_below="@id/tvReview"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/remove"
+            android:textColor="@color/red"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+
